@@ -54,4 +54,13 @@ public class LoginSteps {
     public void theUserCloseTheBrowser() {
         Driver.driver.quit();
     }
+
+    @Then("the user will see error message {string}")
+    public void theUserWillSeeErrorMessage(String message) throws InterruptedException {
+        LoginPage loginPage= new LoginPage(Driver.driver);
+        loginPage.verifyErrorMessage(message);
+        Thread.sleep(5000);
+
+
+    }
 }

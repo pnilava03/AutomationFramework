@@ -6,8 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 
 public class TestRunner {
 
-    @CucumberOptions(
-
+    @CucumberOptions(tags =  "@Sanity",
             features={"src/test/java/features"},
             glue={"stepDefinitions"},
             plugin= { "html:target/results.html", "message:target/results.ndjson" }
