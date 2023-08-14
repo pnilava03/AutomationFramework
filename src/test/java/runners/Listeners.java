@@ -11,9 +11,9 @@ import utils.CommonMethods;
 import utils.Reports;
 
 public class Listeners implements ITestListener {
-    ExtentReports extentReports= Reports.attachReport();
+    ExtentReports extentReports= Reports.attachReport("vTiger Automation Report");
     ExtentTest test;
-    String screenshotDir="./screenshots/";
+    String screenshotDir="./reports/";
     @Override
     public void onTestStart(ITestResult result){
         test=extentReports.createTest(result.getMethod().getMethodName());
@@ -39,6 +39,7 @@ public class Listeners implements ITestListener {
     }
     @Override
     public  void onFinish(ITestContext context){
+
         extentReports.flush();
     }
 

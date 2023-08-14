@@ -15,9 +15,9 @@ public class Reports {
 
 
 
-    public static ExtentReports attachReport() {
-        reporter.config().setReportName("vTiger Automation Report");
-        reporter.config().setDocumentTitle("Test Results");
+    public static ExtentReports attachReport(String projectName) {
+        reporter.config().setReportName(projectName);
+        reporter.config().setDocumentTitle("Test Automation Results");
         extentReports = new ExtentReports();
         extentReports.attachReporter(reporter);
         extentReports.setSystemInfo("OS:: ", System.getProperty("os.name"));
@@ -25,7 +25,7 @@ public class Reports {
         extentReports.setSystemInfo("UserName:: ", System.getProperty("user.name"));
         extentReports.setSystemInfo("Selenium version:: ", "3.141.59");
         return extentReports;
-
-
     }
 }
+
+
