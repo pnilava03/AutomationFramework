@@ -1,5 +1,6 @@
 Feature: VT-001 As a user , I should be able to login to vTiger application
 
+  @Sanity
   Scenario Outline: User should login to the application with valid credentials
     Given the application "vTiger_URL"
     When the user enters the credentials "<userName>","<passWord>"

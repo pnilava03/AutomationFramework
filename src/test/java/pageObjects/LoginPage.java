@@ -6,10 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import utils.CommonMethods;
 import utils.Driver;
 
 public class LoginPage {
 
+    CommonMethods commonMethods= new CommonMethods();
     public LoginPage(WebDriver driver){
         PageFactory.initElements(driver, this);
 
@@ -28,13 +30,19 @@ public class LoginPage {
 
     public void login_To_The_Application(String userName, String passWord){
         enterUserName.sendKeys(userName);
-        enterPassWord.sendKeys(passWord);
+        CommonMethods.takeScreenshot("username");
+        //decoding password
+        String decode_Password=commonMethods.decodePassword(passWord);
+        enterPassWord.sendKeys(decode_Password);
+        CommonMethods.takeScreenshot("password");
         clickOnSubmitButton.click();
+        CommonMethods.takeScreenshot("submitButton");
     }
 
     public void verifyErrorMessage(String expectedValue){
       String actualValue=errorMessage.getText();
       Assert.assertEquals(actualValue,expectedValue);
+      CommonMethods.takeScreenshot("errMsg");
 
     }
 
