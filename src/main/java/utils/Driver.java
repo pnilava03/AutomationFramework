@@ -17,28 +17,24 @@ public class Driver {
 		switch(browser) {
 
 		case "chrome":
-			WebDriverManager.chromedriver().setup();;
 			driver=new ChromeDriver();
 			driver.manage().deleteAllCookies();
 			driver.manage().window().maximize();
 			break;
 
 		case "FF":
-			WebDriverManager.firefoxdriver().setup();;
 			driver= new FirefoxDriver();
 			driver.manage().deleteAllCookies();
 			driver.manage().window().maximize();
 			break;
 
 			case "Safari":
-				WebDriverManager.safaridriver().setup();;
 				driver= new SafariDriver();
 				driver.manage().deleteAllCookies();
 				driver.manage().window().maximize();
 				break;
 
 			default:
-				WebDriverManager.edgedriver().setup();
 				driver= new EdgeDriver();
 				driver.manage().deleteAllCookies();
 				driver.manage().window().maximize();
