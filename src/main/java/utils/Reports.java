@@ -26,6 +26,8 @@ public class Reports {
         extentReports.setSystemInfo("Selenium version:: ", "3.141.59");
         return extentReports;
     }
+
+
 }
 
 

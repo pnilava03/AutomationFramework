@@ -6,10 +6,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import utils.Log;
 
 public class HomePage {
 
+
+
     public HomePage(WebDriver driver) {
+
         PageFactory.initElements(driver, this);
        }
 
@@ -17,9 +21,11 @@ public class HomePage {
         WebElement verifyLogoOnHomePage;
 
 
-    public void verifyHomePage(){
-        System.out.println("Verify logo on home page");
+    public void verifyHomePage() throws InterruptedException {
+        Log.info("Verifying logo on home page");
+        Thread.sleep(6000);
         Assert.assertTrue(verifyLogoOnHomePage.isDisplayed());
+        Log.info("Verified logo on home page Successfully");
 
     }
 }

@@ -2,49 +2,39 @@ package stepDefinitions;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.apache.log4j.PropertyConfigurator;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
+import utils.Log;
 import utils.Driver;
+import utils.PropertiesFile;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Properties;
 
-public class LoginSteps {
+public class LoginSteps  {
 
-    public static Properties prop= new Properties();
-
-    {
-        try {
-            prop.load(Files.newInputStream(Paths.get("./src/test/resources/config/devtest.properties")));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
 
     @io.cucumber.java.en.Given("the application {string}")
     public void theApplication(String url) throws Exception {
 
-        url=prop.getProperty("vTiger_URL");
+
+        url= PropertiesFile.getProperties("vTiger_URL");
+        Log.info("Chrome Browser started");
         Driver.openBrowser("chrome");
+        Log.startTestCases("Launch The application URL::"+url);
         Driver.driver.get(url);
     }
 
     @When("the user enters the credentials {string},{string}")
-    public void theUserEntersTheCredentials(String username, String password) throws IOException {
+    public void theUserEntersTheCredentials(String username, String password) throws IOException, InterruptedException {
         LoginPage loginPage= new LoginPage(Driver.driver);
-        String UserName=prop.getProperty(username);
-        System.out.println("application username is: "+UserName);
-        String PassWord= prop.getProperty(password);
-        System.out.println("application password is: "+PassWord);
+        String UserName=PropertiesFile.getProperties(username);
+        String PassWord= PropertiesFile.getProperties(password);
         loginPage.login_To_The_Application(UserName,PassWord);
     }
 
     @Then("the user should be navigate to the user specific homepage")
-    public void theUserShouldBeNavigateToTheUserSpecificHomepage() {
+    public void theUserShouldBeNavigateToTheUserSpecificHomepage() throws InterruptedException {
         HomePage homePage= new HomePage(Driver.driver);
         homePage.verifyHomePage();
 
@@ -52,6 +42,7 @@ public class LoginSteps {
 
     @Then("the user close the browser")
     public void theUserCloseTheBrowser() {
+        Log.endTestCases("Closing the application");
         Driver.driver.quit();
     }
 
