@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import utils.Log;
 import utils.CommonMethods;
+import utils.Reports;
 
 public class LoginPage{
 
@@ -52,7 +53,7 @@ public class LoginPage{
       String actualValue=errorMessage.getText();
       Assert.assertEquals(actualValue,expectedValue);
         Log.info("Verified error message successfully");
-      CommonMethods.takeScreenshot("errMsg");
+        CommonMethods.takeScreenshot("errMsg");
 
     }
 

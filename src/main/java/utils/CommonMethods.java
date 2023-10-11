@@ -15,7 +15,7 @@ public class CommonMethods {
         TakesScreenshot screenshot=(TakesScreenshot) Driver.driver;
         File file =screenshot.getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(file, new File(".\\reports\\" + screenShotName + ".png"));
+            FileUtils.copyFile(file, new File(System.getProperty("user.dir")+"\\reports\\" + screenShotName + ".png"));
         }catch (IOException e){
             e.printStackTrace();
         }

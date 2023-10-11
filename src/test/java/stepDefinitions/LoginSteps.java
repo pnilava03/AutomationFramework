@@ -42,8 +42,8 @@ public class LoginSteps  {
 
     @Then("the user close the browser")
     public void theUserCloseTheBrowser() {
-        Log.endTestCases("Closing the application");
-        Driver.driver.quit();
+        Driver.driver.close();
+        Log.endTestCases("application closed");
     }
 
     @Then("the user will see error message {string}")

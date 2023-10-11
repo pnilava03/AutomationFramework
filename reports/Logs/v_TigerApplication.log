@@ -1,1046 +1,119 @@
-2023-10-11 12:13:09 DEBUG InternalLoggerFactory:63 - Using SLF4J as the default logging framework
-2023-10-11 12:13:09 DEBUG ResourceLeakDetector:129 - -Dio.netty.leakDetection.level: simple
-2023-10-11 12:13:09 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.targetRecords: 4
-2023-10-11 12:13:09 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3c1e3314
-2023-10-11 12:13:09 DEBUG PlatformDependent0:496 - -Dio.netty.noUnsafe: false
-2023-10-11 12:13:09 DEBUG PlatformDependent0:1000 - Java version: 17
-2023-10-11 12:13:09 DEBUG PlatformDependent0:137 - sun.misc.Unsafe.theUnsafe: available
-2023-10-11 12:13:09 DEBUG PlatformDependent0:161 - sun.misc.Unsafe.copyMemory: available
-2023-10-11 12:13:09 DEBUG PlatformDependent0:193 - sun.misc.Unsafe.storeFence: available
-2023-10-11 12:13:09 DEBUG PlatformDependent0:236 - java.nio.Buffer.address: available
-2023-10-11 12:13:09 DEBUG PlatformDependent0:320 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
-2023-10-11 12:13:09 DEBUG PlatformDependent0:385 - java.nio.Bits.unaligned: available, true
-2023-10-11 12:13:09 DEBUG PlatformDependent0:452 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @6fc6f14e
-2023-10-11 12:13:09 DEBUG PlatformDependent0:482 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
-2023-10-11 12:13:09 DEBUG PlatformDependent:1159 - sun.misc.Unsafe: available
-2023-10-11 12:13:09 DEBUG PlatformDependent:1270 - maxDirectMemory: 4120903680 bytes (maybe)
-2023-10-11 12:13:09 DEBUG PlatformDependent:1289 - -Dio.netty.tmpdir: C:\Users\NILAVA~1\AppData\Local\Temp (java.io.tmpdir)
-2023-10-11 12:13:09 DEBUG PlatformDependent:1368 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2023-10-11 12:13:09 DEBUG PlatformDependent:1119 - Platform: Windows
-2023-10-11 12:13:09 DEBUG PlatformDependent:178 - -Dio.netty.maxDirectMemory: -1 bytes
-2023-10-11 12:13:09 DEBUG PlatformDependent:185 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2023-10-11 12:13:09 DEBUG CleanerJava9:71 - java.nio.ByteBuffer.cleaner(): available
-2023-10-11 12:13:09 DEBUG PlatformDependent:205 - -Dio.netty.noPreferDirect: false
-2023-10-11 12:13:09 DEBUG PlatformDependent:1010 - org.jctools-core.MpscChunkedArrayQueue: available
-2023-10-11 12:13:09 DEBUG InternalThreadLocalMap:100 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2023-10-11 12:13:09 DEBUG InternalThreadLocalMap:101 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-2023-10-11 12:13:09 DEBUG JdkSslContext:83 - Default protocols (JDK): [TLSv1.3, TLSv1.2] 
-2023-10-11 12:13:09 DEBUG JdkSslContext:84 - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
-2023-10-11 12:13:09 DEBUG GlobalEventExecutor:53 - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
-2023-10-11 12:13:09 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
-2023-10-11 12:13:09 DEBUG NioEventLoop:110 - -Dio.netty.noKeySetOptimization: false
-2023-10-11 12:13:09 DEBUG NioEventLoop:111 - -Dio.netty.selectorAutoRebuildThreshold: 512
-2023-10-11 12:13:09 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numHeapArenas: 24
-2023-10-11 12:13:09 DEBUG PooledByteBufAllocator:158 - -Dio.netty.allocator.numDirectArenas: 24
-2023-10-11 12:13:09 DEBUG PooledByteBufAllocator:160 - -Dio.netty.allocator.pageSize: 8192
-2023-10-11 12:13:09 DEBUG PooledByteBufAllocator:165 - -Dio.netty.allocator.maxOrder: 9
-2023-10-11 12:13:09 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.chunkSize: 4194304
-2023-10-11 12:13:09 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
-2023-10-11 12:13:09 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
-2023-10-11 12:13:09 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2023-10-11 12:13:09 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
-2023-10-11 12:13:09 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
-2023-10-11 12:13:09 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: false
-2023-10-11 12:13:09 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
-2023-10-11 12:13:09 DEBUG ByteBufUtil:88 - -Dio.netty.allocator.type: pooled
-2023-10-11 12:13:09 DEBUG ByteBufUtil:97 - -Dio.netty.threadLocalDirectBufferSize: 0
-2023-10-11 12:13:09 DEBUG ByteBufUtil:100 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
-2023-10-11 12:13:10 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 22800 (auto-detected)
-2023-10-11 12:13:10 DEBUG NetUtil:148 - -Djava.net.preferIPv4Stack: false
-2023-10-11 12:13:10 DEBUG NetUtil:149 - -Djava.net.preferIPv6Addresses: false
-2023-10-11 12:13:10 DEBUG NetUtilInitializations:145 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
-2023-10-11 12:13:10 DEBUG NetUtil:206 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
-2023-10-11 12:13:10 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: 10:68:38:ff:fe:d6:63:80 (auto-detected)
-2023-10-11 12:13:10 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
-2023-10-11 12:13:10 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
-2023-10-11 12:13:10 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@45e4fd33
-2023-10-11 12:13:10 DEBUG NettyConnectListener:73 - Using new Channel '[id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]' for 'POST' to '/session'
-2023-10-11 12:13:10 DEBUG Recycler:96 - -Dio.netty.recycler.maxCapacityPerThread: 4096
-2023-10-11 12:13:10 DEBUG Recycler:97 - -Dio.netty.recycler.ratio: 8
-2023-10-11 12:13:10 DEBUG Recycler:98 - -Dio.netty.recycler.chunkSize: 32
-2023-10-11 12:13:10 DEBUG Recycler:99 - -Dio.netty.recycler.blocking: false
-2023-10-11 12:13:10 DEBUG Recycler:100 - -Dio.netty.recycler.batchFastThreadLocalOnly: true
-2023-10-11 12:13:11 DEBUG Brotli:38 - brotli4j not in the classpath; Brotli support will be unavailable.
-2023-10-11 12:13:11 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 336
-Content-Type: application/json; charset=utf-8
-host: localhost:30782
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 887
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:11 DEBUG ChannelManager:270 - Adding key: http://localhost:30782 for channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]
-2023-10-11 12:13:11 DEBUG NettyConnectListener:73 - Using new Channel '[id: 0xbe69dbd6, L:/127.0.0.1:61694 - R:localhost/127.0.0.1:61688]' for 'GET' to '/json/version'
-2023-10-11 12:13:11 DEBUG HttpHandler:70 - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-GET /json/version HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-host: localhost:61688
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Security-Policy: frame-ancestors 'none'
-Content-Length: 424
-Content-Type: application/json; charset=UTF-8
-
-2023-10-11 12:13:11 DEBUG ChannelManager:270 - Adding key: http://localhost:61688 for channel [id: 0xbe69dbd6, L:/127.0.0.1:61694 - R:localhost/127.0.0.1:61688]
-2023-10-11 12:13:11 DEBUG ThreadLocalRandom:214 - -Dio.netty.initialSeedUniquifier: 0x069d9872fb244b37
-2023-10-11 12:13:11 DEBUG NettyConnectListener:73 - Using new Channel '[id: 0x6cb5acbc, L:/127.0.0.1:61695 - R:localhost/127.0.0.1:61688]' for 'GET' to '/devtools/browser/50d00283-1fb5-4afb-a6e6-28593aa45b11'
-2023-10-11 12:13:11 DEBUG WebSocketHandler:105 - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-GET /devtools/browser/50d00283-1fb5-4afb-a6e6-28593aa45b11 HTTP/1.1
-upgrade: websocket
-connection: upgrade
-sec-websocket-key: NUSN78rbFoLXOUd7bWLlKg==
-sec-websocket-version: 13
-origin: http://localhost:61688
-host: localhost:61688
-accept: */*
-user-agent: AHC/2.1
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 101 WebSocket Protocol Handshake
-Upgrade: WebSocket
-Connection: Upgrade
-Sec-WebSocket-Accept: qORoCHfwgVYf+3SUZrdP9vCA+OI=
-
-2023-10-11 12:13:11 INFO  Base:25 - Chrome driver initialized
-2023-10-11 12:13:11 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]' for 'DELETE' to 'http://localhost:30782/session/f2b23fe39b661e7cba4949318951dd03/cookie'
-2023-10-11 12:13:11 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782] for DELETE '/session/f2b23fe39b661e7cba4949318951dd03/cookie'
-2023-10-11 12:13:11 DEBUG HttpHandler:70 - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-DELETE /session/f2b23fe39b661e7cba4949318951dd03/cookie HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Type: application/json; charset=utf-8
-host: localhost:30782
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 14
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:11 DEBUG ChannelManager:270 - Adding key: http://localhost:30782 for channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]
-2023-10-11 12:13:11 INFO  Base:27 - Delete All cookies
-2023-10-11 12:13:11 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]' for 'POST' to 'http://localhost:30782/session/f2b23fe39b661e7cba4949318951dd03/window/maximize'
-2023-10-11 12:13:11 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782] for POST '/session/f2b23fe39b661e7cba4949318951dd03/window/maximize'
-2023-10-11 12:13:11 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/f2b23fe39b661e7cba4949318951dd03/window/maximize HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 3
-Content-Type: application/json; charset=utf-8
-host: localhost:30782
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 51
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:11 DEBUG ChannelManager:270 - Adding key: http://localhost:30782 for channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]
-2023-10-11 12:13:11 INFO  Base:29 - Maximize Chrome Driver
-2023-10-11 12:13:11 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]' for 'POST' to 'http://localhost:30782/session/f2b23fe39b661e7cba4949318951dd03/url'
-2023-10-11 12:13:11 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782] for POST '/session/f2b23fe39b661e7cba4949318951dd03/url'
-2023-10-11 12:13:11 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61688 : 1
-2023-10-11 12:13:12 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/f2b23fe39b661e7cba4949318951dd03/url HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 52
-Content-Type: application/json; charset=utf-8
-host: localhost:30782
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 14
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:12 DEBUG ChannelManager:270 - Adding key: http://localhost:30782 for channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]
-2023-10-11 12:13:12 INFO  Base:33 - Entering username
-2023-10-11 12:13:12 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]' for 'POST' to 'http://localhost:30782/session/f2b23fe39b661e7cba4949318951dd03/element'
-2023-10-11 12:13:12 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782] for POST '/session/f2b23fe39b661e7cba4949318951dd03/element'
-2023-10-11 12:13:12 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/f2b23fe39b661e7cba4949318951dd03/element HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 73
-Content-Type: application/json; charset=utf-8
-host: localhost:30782
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 95
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:12 DEBUG ChannelManager:270 - Adding key: http://localhost:30782 for channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]
-2023-10-11 12:13:12 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]' for 'POST' to 'http://localhost:30782/session/f2b23fe39b661e7cba4949318951dd03/element/813796C061F3A7A891BE8D283378B521_element_42/value'
-2023-10-11 12:13:12 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782] for POST '/session/f2b23fe39b661e7cba4949318951dd03/element/813796C061F3A7A891BE8D283378B521_element_42/value'
-2023-10-11 12:13:12 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/f2b23fe39b661e7cba4949318951dd03/element/813796C061F3A7A891BE8D283378B521_element_42/value HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 138
-Content-Type: application/json; charset=utf-8
-host: localhost:30782
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 14
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:12 DEBUG ChannelManager:270 - Adding key: http://localhost:30782 for channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]
-2023-10-11 12:13:12 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]' for 'GET' to 'http://localhost:30782/session/f2b23fe39b661e7cba4949318951dd03/screenshot'
-2023-10-11 12:13:12 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782] for GET '/session/f2b23fe39b661e7cba4949318951dd03/screenshot'
-2023-10-11 12:13:12 DEBUG HttpHandler:70 - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-GET /session/f2b23fe39b661e7cba4949318951dd03/screenshot HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Cache-Control: no-cache
-Content-Type: application/json; charset=utf-8
-host: localhost:30782
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 313632
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:12 DEBUG ChannelManager:270 - Adding key: http://localhost:30782 for channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]
-2023-10-11 12:13:12 INFO  Base:36 - Entered username successfully
-2023-10-11 12:13:12 INFO  Base:38 - Entering password
-2023-10-11 12:13:12 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]' for 'POST' to 'http://localhost:30782/session/f2b23fe39b661e7cba4949318951dd03/element'
-2023-10-11 12:13:12 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782] for POST '/session/f2b23fe39b661e7cba4949318951dd03/element'
-2023-10-11 12:13:12 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/f2b23fe39b661e7cba4949318951dd03/element HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 77
-Content-Type: application/json; charset=utf-8
-host: localhost:30782
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 94
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:12 DEBUG ChannelManager:270 - Adding key: http://localhost:30782 for channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]
-2023-10-11 12:13:12 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]' for 'POST' to 'http://localhost:30782/session/f2b23fe39b661e7cba4949318951dd03/element/813796C061F3A7A891BE8D283378B521_element_2/value'
-2023-10-11 12:13:12 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782] for POST '/session/f2b23fe39b661e7cba4949318951dd03/element/813796C061F3A7A891BE8D283378B521_element_2/value'
-2023-10-11 12:13:12 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/f2b23fe39b661e7cba4949318951dd03/element/813796C061F3A7A891BE8D283378B521_element_2/value HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 117
-Content-Type: application/json; charset=utf-8
-host: localhost:30782
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 14
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:12 DEBUG ChannelManager:270 - Adding key: http://localhost:30782 for channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]
-2023-10-11 12:13:12 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]' for 'GET' to 'http://localhost:30782/session/f2b23fe39b661e7cba4949318951dd03/screenshot'
-2023-10-11 12:13:12 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782] for GET '/session/f2b23fe39b661e7cba4949318951dd03/screenshot'
-2023-10-11 12:13:12 DEBUG HttpHandler:70 - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-GET /session/f2b23fe39b661e7cba4949318951dd03/screenshot HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Cache-Control: no-cache
-Content-Type: application/json; charset=utf-8
-host: localhost:30782
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 313732
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:12 DEBUG ChannelManager:270 - Adding key: http://localhost:30782 for channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]
-2023-10-11 12:13:12 INFO  Base:42 - Entered password successfully
-2023-10-11 12:13:13 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61688 : 1
-2023-10-11 12:13:13 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:30782 : 1
-2023-10-11 12:13:14 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61688 : 1
-2023-10-11 12:13:14 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:30782 : 1
-2023-10-11 12:13:15 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61688 : 1
-2023-10-11 12:13:15 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:30782 : 1
-2023-10-11 12:13:15 INFO  Base:44 - clicking on Submit button
-2023-10-11 12:13:15 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]' for 'POST' to 'http://localhost:30782/session/f2b23fe39b661e7cba4949318951dd03/element'
-2023-10-11 12:13:15 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782] for POST '/session/f2b23fe39b661e7cba4949318951dd03/element'
-2023-10-11 12:13:15 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/f2b23fe39b661e7cba4949318951dd03/element HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 57
-Content-Type: application/json; charset=utf-8
-host: localhost:30782
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 95
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:15 DEBUG ChannelManager:270 - Adding key: http://localhost:30782 for channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]
-2023-10-11 12:13:15 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]' for 'POST' to 'http://localhost:30782/session/f2b23fe39b661e7cba4949318951dd03/element/813796C061F3A7A891BE8D283378B521_element_51/click'
-2023-10-11 12:13:15 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782] for POST '/session/f2b23fe39b661e7cba4949318951dd03/element/813796C061F3A7A891BE8D283378B521_element_51/click'
-2023-10-11 12:13:16 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61688 : 1
-2023-10-11 12:13:17 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61688 : 1
-2023-10-11 12:13:17 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/f2b23fe39b661e7cba4949318951dd03/element/813796C061F3A7A891BE8D283378B521_element_51/click HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 57
-Content-Type: application/json; charset=utf-8
-host: localhost:30782
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 14
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:17 DEBUG ChannelManager:270 - Adding key: http://localhost:30782 for channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]
-2023-10-11 12:13:17 INFO  Base:46 - clicked on Submit button successfully
-2023-10-11 12:13:17 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]' for 'GET' to 'http://localhost:30782/session/f2b23fe39b661e7cba4949318951dd03/screenshot'
-2023-10-11 12:13:17 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782] for GET '/session/f2b23fe39b661e7cba4949318951dd03/screenshot'
-2023-10-11 12:13:17 DEBUG HttpHandler:70 - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-GET /session/f2b23fe39b661e7cba4949318951dd03/screenshot HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Cache-Control: no-cache
-Content-Type: application/json; charset=utf-8
-host: localhost:30782
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 140772
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:17 DEBUG ChannelManager:270 - Adding key: http://localhost:30782 for channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]
-2023-10-11 12:13:17 INFO  Base:26 - Verifying logo on home page
-2023-10-11 12:13:18 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61688 : 1
-2023-10-11 12:13:18 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:30782 : 1
-2023-10-11 12:13:19 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61688 : 1
-2023-10-11 12:13:19 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:30782 : 1
-2023-10-11 12:13:20 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61688 : 1
-2023-10-11 12:13:20 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:30782 : 1
-2023-10-11 12:13:21 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61688 : 1
-2023-10-11 12:13:21 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:30782 : 1
-2023-10-11 12:13:22 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61688 : 1
-2023-10-11 12:13:22 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:30782 : 1
-2023-10-11 12:13:23 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]' for 'POST' to 'http://localhost:30782/session/f2b23fe39b661e7cba4949318951dd03/element'
-2023-10-11 12:13:23 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782] for POST '/session/f2b23fe39b661e7cba4949318951dd03/element'
-2023-10-11 12:13:23 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/f2b23fe39b661e7cba4949318951dd03/element HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 73
-Content-Type: application/json; charset=utf-8
-host: localhost:30782
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 95
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:23 DEBUG ChannelManager:270 - Adding key: http://localhost:30782 for channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]
-2023-10-11 12:13:23 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]' for 'POST' to 'http://localhost:30782/session/f2b23fe39b661e7cba4949318951dd03/execute/sync'
-2023-10-11 12:13:23 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782] for POST '/session/f2b23fe39b661e7cba4949318951dd03/execute/sync'
-2023-10-11 12:13:23 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/f2b23fe39b661e7cba4949318951dd03/execute/sync HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 48814
-Content-Type: application/json; charset=utf-8
-host: localhost:30782
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 14
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:23 DEBUG ChannelManager:270 - Adding key: http://localhost:30782 for channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]
-2023-10-11 12:13:23 INFO  Base:29 - Verified logo on home page Successfully
-2023-10-11 12:13:23 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]' for 'DELETE' to 'http://localhost:30782/session/f2b23fe39b661e7cba4949318951dd03'
-2023-10-11 12:13:23 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782] for DELETE '/session/f2b23fe39b661e7cba4949318951dd03'
-2023-10-11 12:13:23 DEBUG WebSocketHandler:126 - Channel Closed: [id: 0x6cb5acbc, L:/127.0.0.1:61695 ! R:localhost/127.0.0.1:61688] with attribute NettyResponseFuture{currentRetry=0,
-	isDone=1,
-	isCancelled=0,
-	asyncHandler=org.asynchttpclient.ws.WebSocketUpgradeHandler@75db809f,
-	nettyRequest=org.asynchttpclient.netty.request.NettyRequest@4bdf9ae0,
-	future=java.util.concurrent.CompletableFuture@4df740ef[Completed normally],
-	uri=ws://localhost:61688/devtools/browser/50d00283-1fb5-4afb-a6e6-28593aa45b11,
-	keepAlive=true,
-	redirectCount=0,
-	timeoutsHolder=null,
-	inAuth=0,
-	touch=1697006591370}
-2023-10-11 12:13:23 DEBUG ChannelManager:315 - Closing Channel [id: 0x6cb5acbc, L:/127.0.0.1:61695 ! R:localhost/127.0.0.1:61688] 
-2023-10-11 12:13:23 DEBUG HttpHandler:159 - Unexpected I/O exception on channel [id: 0xbe69dbd6, L:/127.0.0.1:61694 - R:localhost/127.0.0.1:61688]
-java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2023-10-11 12:13:23 DEBUG ChannelManager:315 - Closing Channel [id: 0xbe69dbd6, L:/127.0.0.1:61694 - R:localhost/127.0.0.1:61688] 
-2023-10-11 12:13:23 DEBUG HttpHandler:126 - Channel Closed: [id: 0xbe69dbd6, L:/127.0.0.1:61694 ! R:localhost/127.0.0.1:61688] with attribute DISCARD
-2023-10-11 12:13:23 DEBUG HttpHandler:70 - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-DELETE /session/f2b23fe39b661e7cba4949318951dd03 HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Type: application/json; charset=utf-8
-host: localhost:30782
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 14
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:23 DEBUG ChannelManager:270 - Adding key: http://localhost:30782 for channel [id: 0x8da63844, L:/127.0.0.1:61687 - R:localhost/127.0.0.1:30782]
-2023-10-11 12:13:24 DEBUG HttpHandler:126 - Channel Closed: [id: 0x8da63844, L:/127.0.0.1:61687 ! R:localhost/127.0.0.1:30782] with attribute DISCARD
-2023-10-11 12:13:24 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61688 : 1
-2023-10-11 12:13:24 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:30782 : 1
-2023-10-11 12:13:24 DEBUG DefaultChannelPool:302 - Adding Candidate expired Channel [id: 0xbe69dbd6, L:/127.0.0.1:61694 ! R:localhost/127.0.0.1:61688] isIdleTimeoutExpired=false isRemotelyClosed=true isTtlExpired=false
-2023-10-11 12:13:24 DEBUG DefaultChannelPool:321 - Closing Idle Channel [id: 0xbe69dbd6, L:/127.0.0.1:61694 ! R:localhost/127.0.0.1:61688]
-2023-10-11 12:13:24 DEBUG DefaultChannelPool:302 - Adding Candidate expired Channel [id: 0x8da63844, L:/127.0.0.1:61687 ! R:localhost/127.0.0.1:30782] isIdleTimeoutExpired=false isRemotelyClosed=true isTtlExpired=false
-2023-10-11 12:13:24 DEBUG DefaultChannelPool:321 - Closing Idle Channel [id: 0x8da63844, L:/127.0.0.1:61687 ! R:localhost/127.0.0.1:30782]
-2023-10-11 12:13:24 DEBUG DefaultChannelPool:374 - Closed 2 connections out of 2 in 1 ms
-2023-10-11 12:13:24 DEBUG NettyConnectListener:73 - Using new Channel '[id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]' for 'POST' to '/session'
-2023-10-11 12:13:25 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 336
-Content-Type: application/json; charset=utf-8
-host: localhost:13029
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 886
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:25 DEBUG ChannelManager:270 - Adding key: http://localhost:13029 for channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]
-2023-10-11 12:13:25 DEBUG NettyConnectListener:73 - Using new Channel '[id: 0xdea49bf4, L:/127.0.0.1:61728 - R:localhost/127.0.0.1:61721]' for 'GET' to '/json/version'
-2023-10-11 12:13:25 DEBUG HttpHandler:70 - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-GET /json/version HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-host: localhost:61721
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Security-Policy: frame-ancestors 'none'
-Content-Length: 424
-Content-Type: application/json; charset=UTF-8
-
-2023-10-11 12:13:25 DEBUG ChannelManager:270 - Adding key: http://localhost:61721 for channel [id: 0xdea49bf4, L:/127.0.0.1:61728 - R:localhost/127.0.0.1:61721]
-2023-10-11 12:13:25 DEBUG NettyConnectListener:73 - Using new Channel '[id: 0xc1232568, L:/127.0.0.1:61729 - R:localhost/127.0.0.1:61721]' for 'GET' to '/devtools/browser/2ac93284-1c2a-4013-9b6e-5f254b964cd8'
-2023-10-11 12:13:25 DEBUG WebSocketHandler:105 - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-GET /devtools/browser/2ac93284-1c2a-4013-9b6e-5f254b964cd8 HTTP/1.1
-upgrade: websocket
-connection: upgrade
-sec-websocket-key: SIaqpKeGLDlXFE+lbIVDWQ==
-sec-websocket-version: 13
-origin: http://localhost:61721
-host: localhost:61721
-accept: */*
-user-agent: AHC/2.1
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 101 WebSocket Protocol Handshake
-Upgrade: WebSocket
-Connection: Upgrade
-Sec-WebSocket-Accept: jGIk2yFo02oYiJGrjp5wT9uvIjc=
-
-2023-10-11 12:13:25 INFO  Base:25 - Chrome driver initialized
-2023-10-11 12:13:25 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]' for 'DELETE' to 'http://localhost:13029/session/8764506cc16ba9c1cfd42cb5995de330/cookie'
-2023-10-11 12:13:25 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029] for DELETE '/session/8764506cc16ba9c1cfd42cb5995de330/cookie'
-2023-10-11 12:13:25 DEBUG HttpHandler:70 - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-DELETE /session/8764506cc16ba9c1cfd42cb5995de330/cookie HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Type: application/json; charset=utf-8
-host: localhost:13029
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 14
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:25 DEBUG ChannelManager:270 - Adding key: http://localhost:13029 for channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]
-2023-10-11 12:13:25 INFO  Base:27 - Delete All cookies
-2023-10-11 12:13:25 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]' for 'POST' to 'http://localhost:13029/session/8764506cc16ba9c1cfd42cb5995de330/window/maximize'
-2023-10-11 12:13:25 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029] for POST '/session/8764506cc16ba9c1cfd42cb5995de330/window/maximize'
-2023-10-11 12:13:25 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/8764506cc16ba9c1cfd42cb5995de330/window/maximize HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 3
-Content-Type: application/json; charset=utf-8
-host: localhost:13029
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 51
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:25 DEBUG ChannelManager:270 - Adding key: http://localhost:13029 for channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]
-2023-10-11 12:13:25 INFO  Base:29 - Maximize Chrome Driver
-2023-10-11 12:13:25 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]' for 'POST' to 'http://localhost:13029/session/8764506cc16ba9c1cfd42cb5995de330/url'
-2023-10-11 12:13:25 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029] for POST '/session/8764506cc16ba9c1cfd42cb5995de330/url'
-2023-10-11 12:13:26 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/8764506cc16ba9c1cfd42cb5995de330/url HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 52
-Content-Type: application/json; charset=utf-8
-host: localhost:13029
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 14
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:26 DEBUG ChannelManager:270 - Adding key: http://localhost:13029 for channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]
-2023-10-11 12:13:26 INFO  Base:33 - Entering username
-2023-10-11 12:13:26 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]' for 'POST' to 'http://localhost:13029/session/8764506cc16ba9c1cfd42cb5995de330/element'
-2023-10-11 12:13:26 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029] for POST '/session/8764506cc16ba9c1cfd42cb5995de330/element'
-2023-10-11 12:13:26 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/8764506cc16ba9c1cfd42cb5995de330/element HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 73
-Content-Type: application/json; charset=utf-8
-host: localhost:13029
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 95
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:26 DEBUG ChannelManager:270 - Adding key: http://localhost:13029 for channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]
-2023-10-11 12:13:26 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]' for 'POST' to 'http://localhost:13029/session/8764506cc16ba9c1cfd42cb5995de330/element/6BC7D3FB3810D2BFCB005CDD7385A339_element_42/value'
-2023-10-11 12:13:26 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029] for POST '/session/8764506cc16ba9c1cfd42cb5995de330/element/6BC7D3FB3810D2BFCB005CDD7385A339_element_42/value'
-2023-10-11 12:13:26 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61721 : 1
-2023-10-11 12:13:26 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/8764506cc16ba9c1cfd42cb5995de330/element/6BC7D3FB3810D2BFCB005CDD7385A339_element_42/value HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 148
-Content-Type: application/json; charset=utf-8
-host: localhost:13029
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 14
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:26 DEBUG ChannelManager:270 - Adding key: http://localhost:13029 for channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]
-2023-10-11 12:13:26 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]' for 'GET' to 'http://localhost:13029/session/8764506cc16ba9c1cfd42cb5995de330/screenshot'
-2023-10-11 12:13:26 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029] for GET '/session/8764506cc16ba9c1cfd42cb5995de330/screenshot'
-2023-10-11 12:13:26 DEBUG HttpHandler:70 - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-GET /session/8764506cc16ba9c1cfd42cb5995de330/screenshot HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Cache-Control: no-cache
-Content-Type: application/json; charset=utf-8
-host: localhost:13029
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 313804
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:26 DEBUG ChannelManager:270 - Adding key: http://localhost:13029 for channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]
-2023-10-11 12:13:26 INFO  Base:36 - Entered username successfully
-2023-10-11 12:13:26 INFO  Base:38 - Entering password
-2023-10-11 12:13:26 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]' for 'POST' to 'http://localhost:13029/session/8764506cc16ba9c1cfd42cb5995de330/element'
-2023-10-11 12:13:26 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029] for POST '/session/8764506cc16ba9c1cfd42cb5995de330/element'
-2023-10-11 12:13:26 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/8764506cc16ba9c1cfd42cb5995de330/element HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 77
-Content-Type: application/json; charset=utf-8
-host: localhost:13029
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 94
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:26 DEBUG ChannelManager:270 - Adding key: http://localhost:13029 for channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]
-2023-10-11 12:13:26 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]' for 'POST' to 'http://localhost:13029/session/8764506cc16ba9c1cfd42cb5995de330/element/6BC7D3FB3810D2BFCB005CDD7385A339_element_2/value'
-2023-10-11 12:13:26 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029] for POST '/session/8764506cc16ba9c1cfd42cb5995de330/element/6BC7D3FB3810D2BFCB005CDD7385A339_element_2/value'
-2023-10-11 12:13:26 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/8764506cc16ba9c1cfd42cb5995de330/element/6BC7D3FB3810D2BFCB005CDD7385A339_element_2/value HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 117
-Content-Type: application/json; charset=utf-8
-host: localhost:13029
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 14
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:26 DEBUG ChannelManager:270 - Adding key: http://localhost:13029 for channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]
-2023-10-11 12:13:26 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]' for 'GET' to 'http://localhost:13029/session/8764506cc16ba9c1cfd42cb5995de330/screenshot'
-2023-10-11 12:13:26 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029] for GET '/session/8764506cc16ba9c1cfd42cb5995de330/screenshot'
-2023-10-11 12:13:26 DEBUG HttpHandler:70 - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-GET /session/8764506cc16ba9c1cfd42cb5995de330/screenshot HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Cache-Control: no-cache
-Content-Type: application/json; charset=utf-8
-host: localhost:13029
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 313888
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:26 DEBUG ChannelManager:270 - Adding key: http://localhost:13029 for channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]
-2023-10-11 12:13:26 INFO  Base:42 - Entered password successfully
-2023-10-11 12:13:27 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:13029 : 1
-2023-10-11 12:13:27 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61721 : 1
-2023-10-11 12:13:28 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:13029 : 1
-2023-10-11 12:13:28 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61721 : 1
-2023-10-11 12:13:29 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:13029 : 1
-2023-10-11 12:13:29 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61721 : 1
-2023-10-11 12:13:29 INFO  Base:44 - clicking on Submit button
-2023-10-11 12:13:29 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]' for 'POST' to 'http://localhost:13029/session/8764506cc16ba9c1cfd42cb5995de330/element'
-2023-10-11 12:13:29 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029] for POST '/session/8764506cc16ba9c1cfd42cb5995de330/element'
-2023-10-11 12:13:29 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/8764506cc16ba9c1cfd42cb5995de330/element HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 57
-Content-Type: application/json; charset=utf-8
-host: localhost:13029
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 95
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:29 DEBUG ChannelManager:270 - Adding key: http://localhost:13029 for channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]
-2023-10-11 12:13:29 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]' for 'POST' to 'http://localhost:13029/session/8764506cc16ba9c1cfd42cb5995de330/element/6BC7D3FB3810D2BFCB005CDD7385A339_element_51/click'
-2023-10-11 12:13:29 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029] for POST '/session/8764506cc16ba9c1cfd42cb5995de330/element/6BC7D3FB3810D2BFCB005CDD7385A339_element_51/click'
-2023-10-11 12:13:30 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61721 : 1
-2023-10-11 12:13:30 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/8764506cc16ba9c1cfd42cb5995de330/element/6BC7D3FB3810D2BFCB005CDD7385A339_element_51/click HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 57
-Content-Type: application/json; charset=utf-8
-host: localhost:13029
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 14
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:30 DEBUG ChannelManager:270 - Adding key: http://localhost:13029 for channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]
-2023-10-11 12:13:30 INFO  Base:46 - clicked on Submit button successfully
-2023-10-11 12:13:30 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]' for 'GET' to 'http://localhost:13029/session/8764506cc16ba9c1cfd42cb5995de330/screenshot'
-2023-10-11 12:13:30 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029] for GET '/session/8764506cc16ba9c1cfd42cb5995de330/screenshot'
-2023-10-11 12:13:30 DEBUG HttpHandler:70 - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-GET /session/8764506cc16ba9c1cfd42cb5995de330/screenshot HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Cache-Control: no-cache
-Content-Type: application/json; charset=utf-8
-host: localhost:13029
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 327532
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:30 DEBUG ChannelManager:270 - Adding key: http://localhost:13029 for channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]
-2023-10-11 12:13:30 INFO  Base:51 - Verifying the error message
-2023-10-11 12:13:30 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]' for 'POST' to 'http://localhost:13029/session/8764506cc16ba9c1cfd42cb5995de330/element'
-2023-10-11 12:13:30 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029] for POST '/session/8764506cc16ba9c1cfd42cb5995de330/element'
-2023-10-11 12:13:31 DEBUG HttpHandler:70 - 
-
-Request DefaultHttpRequest(decodeResult: success, version: HTTP/1.1)
-POST /session/8764506cc16ba9c1cfd42cb5995de330/element HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Length: 75
-Content-Type: application/json; charset=utf-8
-host: localhost:13029
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 96
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:31 DEBUG ChannelManager:270 - Adding key: http://localhost:13029 for channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]
-2023-10-11 12:13:31 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]' for 'GET' to 'http://localhost:13029/session/8764506cc16ba9c1cfd42cb5995de330/element/52926252DB94E15FFF5DD2BF0E5FE79A_element_152/text'
-2023-10-11 12:13:31 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029] for GET '/session/8764506cc16ba9c1cfd42cb5995de330/element/52926252DB94E15FFF5DD2BF0E5FE79A_element_152/text'
-2023-10-11 12:13:31 DEBUG HttpHandler:70 - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-GET /session/8764506cc16ba9c1cfd42cb5995de330/element/52926252DB94E15FFF5DD2BF0E5FE79A_element_152/text HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Cache-Control: no-cache
-Content-Type: application/json; charset=utf-8
-host: localhost:13029
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 59
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:31 DEBUG ChannelManager:270 - Adding key: http://localhost:13029 for channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]
-2023-10-11 12:13:31 INFO  Base:54 - Verified error message successfully
-2023-10-11 12:13:31 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]' for 'GET' to 'http://localhost:13029/session/8764506cc16ba9c1cfd42cb5995de330/screenshot'
-2023-10-11 12:13:31 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029] for GET '/session/8764506cc16ba9c1cfd42cb5995de330/screenshot'
-2023-10-11 12:13:31 DEBUG HttpHandler:70 - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-GET /session/8764506cc16ba9c1cfd42cb5995de330/screenshot HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Cache-Control: no-cache
-Content-Type: application/json; charset=utf-8
-host: localhost:13029
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 327532
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:31 DEBUG ChannelManager:270 - Adding key: http://localhost:13029 for channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]
-2023-10-11 12:13:31 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:13029 : 1
-2023-10-11 12:13:31 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61721 : 1
-2023-10-11 12:13:32 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:13029 : 1
-2023-10-11 12:13:32 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61721 : 1
-2023-10-11 12:13:33 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:13029 : 1
-2023-10-11 12:13:33 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61721 : 1
-2023-10-11 12:13:35 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:13029 : 1
-2023-10-11 12:13:35 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61721 : 1
-2023-10-11 12:13:36 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:13029 : 1
-2023-10-11 12:13:36 DEBUG DefaultChannelPool:348 - Entry count for : http://localhost:61721 : 1
-2023-10-11 12:13:36 DEBUG WebSocketHandler:126 - Channel Closed: [id: 0xc1232568, L:/127.0.0.1:61729 ! R:localhost/127.0.0.1:61721] with attribute NettyResponseFuture{currentRetry=0,
-	isDone=1,
-	isCancelled=0,
-	asyncHandler=org.asynchttpclient.ws.WebSocketUpgradeHandler@64b5f19c,
-	nettyRequest=org.asynchttpclient.netty.request.NettyRequest@21b7736e,
-	future=java.util.concurrent.CompletableFuture@23af174e[Completed normally],
-	uri=ws://localhost:61721/devtools/browser/2ac93284-1c2a-4013-9b6e-5f254b964cd8,
-	keepAlive=true,
-	redirectCount=0,
-	timeoutsHolder=null,
-	inAuth=0,
-	touch=1697006605367}
-2023-10-11 12:13:36 DEBUG NettyRequestSender:593 - Using pooled Channel '[id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]' for 'DELETE' to 'http://localhost:13029/session/8764506cc16ba9c1cfd42cb5995de330'
-2023-10-11 12:13:36 DEBUG ChannelManager:315 - Closing Channel [id: 0xc1232568, L:/127.0.0.1:61729 ! R:localhost/127.0.0.1:61721] 
-2023-10-11 12:13:36 DEBUG NettyRequestSender:251 - Using open Channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029] for DELETE '/session/8764506cc16ba9c1cfd42cb5995de330'
-2023-10-11 12:13:36 DEBUG HttpHandler:159 - Unexpected I/O exception on channel [id: 0xdea49bf4, L:/127.0.0.1:61728 - R:localhost/127.0.0.1:61721]
-java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2023-10-11 12:13:36 DEBUG ChannelManager:315 - Closing Channel [id: 0xdea49bf4, L:/127.0.0.1:61728 - R:localhost/127.0.0.1:61721] 
-2023-10-11 12:13:36 DEBUG HttpHandler:126 - Channel Closed: [id: 0xdea49bf4, L:/127.0.0.1:61728 ! R:localhost/127.0.0.1:61721] with attribute DISCARD
-2023-10-11 12:13:36 DEBUG HttpHandler:70 - 
-
-Request DefaultFullHttpRequest(decodeResult: success, version: HTTP/1.1, content: EmptyByteBufBE)
-DELETE /session/8764506cc16ba9c1cfd42cb5995de330 HTTP/1.1
-User-Agent: selenium/4.11.0 (java windows)
-Content-Type: application/json; charset=utf-8
-host: localhost:13029
-accept: */*
-
-Response DefaultHttpResponse(decodeResult: success, version: HTTP/1.1)
-HTTP/1.1 200 OK
-Content-Length: 14
-Content-Type: application/json; charset=utf-8
-cache-control: no-cache
-
-2023-10-11 12:13:36 DEBUG ChannelManager:270 - Adding key: http://localhost:13029 for channel [id: 0x326e5d43, L:/127.0.0.1:61720 - R:localhost/127.0.0.1:13029]
-2023-10-11 12:13:36 DEBUG HttpHandler:126 - Channel Closed: [id: 0x326e5d43, L:/127.0.0.1:61720 ! R:localhost/127.0.0.1:13029] with attribute DISCARD
-2023-10-11 13:41:41 INFO  Log:37 - Chrome Browser started
-2023-10-11 13:41:45 INFO  Log:37 - Chrome driver initialized
-2023-10-11 13:41:46 INFO  Log:37 - Delete All cookies
-2023-10-11 13:41:46 INFO  Log:37 - Maximize Chrome Driver
-2023-10-11 13:41:46 INFO  Log:11 - ****************************************************************************************
-2023-10-11 13:41:46 INFO  Log:13 - ****************************************************************************************
-2023-10-11 13:41:46 INFO  Log:15 - $$$$$$$$$$$$$$$$$$$$$                 Launch The application URL::http://localhost:8888/       $$$$$$$$$$$$$$$$$$$$$$$$$
-2023-10-11 13:41:46 INFO  Log:17 - ****************************************************************************************
-2023-10-11 13:41:46 INFO  Log:19 - ****************************************************************************************
-2023-10-11 13:41:46 INFO  Log:37 - Entering username
-2023-10-11 13:41:47 INFO  Log:37 - Entered username successfully
-2023-10-11 13:41:47 INFO  Log:37 - Entering password
-2023-10-11 13:41:47 INFO  Log:37 - Entered password successfully
-2023-10-11 13:41:50 INFO  Log:37 - clicking on Submit button
-2023-10-11 13:41:52 INFO  Log:37 - clicked on Submit button successfully
-2023-10-11 13:41:52 INFO  Log:37 - Verifying logo on home page
-2023-10-11 13:41:58 INFO  Log:37 - Verified logo on home page Successfully
-2023-10-11 13:41:58 INFO  Log:24 - XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX
-2023-10-11 13:41:58 INFO  Log:26 - X
-2023-10-11 13:41:58 INFO  Log:28 - X
-2023-10-11 13:41:58 INFO  Log:30 - X
-2023-10-11 13:41:58 INFO  Log:32 - X
-2023-10-11 13:41:58 INFO  Log:37 - Chrome Browser started
-2023-10-11 13:42:00 INFO  Log:37 - Chrome driver initialized
-2023-10-11 13:42:00 INFO  Log:37 - Delete All cookies
-2023-10-11 13:42:00 INFO  Log:37 - Maximize Chrome Driver
-2023-10-11 13:42:00 INFO  Log:11 - ****************************************************************************************
-2023-10-11 13:42:00 INFO  Log:13 - ****************************************************************************************
-2023-10-11 13:42:00 INFO  Log:15 - $$$$$$$$$$$$$$$$$$$$$                 Launch The application URL::http://localhost:8888/       $$$$$$$$$$$$$$$$$$$$$$$$$
-2023-10-11 13:42:00 INFO  Log:17 - ****************************************************************************************
-2023-10-11 13:42:00 INFO  Log:19 - ****************************************************************************************
-2023-10-11 13:42:00 INFO  Log:37 - Entering username
-2023-10-11 13:42:01 INFO  Log:37 - Entered username successfully
-2023-10-11 13:42:01 INFO  Log:37 - Entering password
-2023-10-11 13:42:01 INFO  Log:37 - Entered password successfully
-2023-10-11 13:42:04 INFO  Log:37 - clicking on Submit button
-2023-10-11 13:42:05 INFO  Log:37 - clicked on Submit button successfully
-2023-10-11 13:42:05 INFO  Log:37 - Verifying the error message
-2023-10-11 13:42:05 INFO  Log:37 - Verified error message successfully
-2023-10-11 13:42:10 INFO  Log:24 - XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX
-2023-10-11 13:42:10 INFO  Log:26 - X
-2023-10-11 13:42:10 INFO  Log:28 - X
-2023-10-11 13:42:10 INFO  Log:30 - X
-2023-10-11 13:42:10 INFO  Log:32 - X
-2023-10-11 14:29:05 INFO  Log:41 - Loading Property file
-2023-10-11 14:29:05 INFO  Log:41 - Chrome Browser started
-2023-10-11 14:29:09 INFO  Log:41 - Chrome driver initialized
-2023-10-11 14:29:09 INFO  Log:41 - Delete All cookies
-2023-10-11 14:29:09 INFO  Log:41 - Maximize Chrome Driver
-2023-10-11 14:29:09 INFO  Log:15 - ****************************************************************************************
-2023-10-11 14:29:09 INFO  Log:17 - ****************************************************************************************
-2023-10-11 14:29:09 INFO  Log:19 - $$$$$$$$$$$$$$$$$$$$$                 Launch The application URL::http://localhost:8888/       $$$$$$$$$$$$$$$$$$$$$$$$$
-2023-10-11 14:29:09 INFO  Log:21 - ****************************************************************************************
-2023-10-11 14:29:09 INFO  Log:23 - ****************************************************************************************
-2023-10-11 14:29:09 INFO  Log:41 - Loading Property file
-2023-10-11 14:29:09 INFO  Log:41 - Loading Property file
-2023-10-11 14:29:09 INFO  Log:41 - Entering username
-2023-10-11 14:29:10 INFO  Log:41 - Entered username successfully
-2023-10-11 14:29:10 INFO  Log:41 - Entering password
-2023-10-11 14:29:10 INFO  Log:41 - Entered password successfully
-2023-10-11 14:29:13 INFO  Log:41 - clicking on Submit button
-2023-10-11 14:29:15 INFO  Log:41 - clicked on Submit button successfully
-2023-10-11 14:29:15 INFO  Log:41 - Verifying logo on home page
-2023-10-11 14:29:21 INFO  Log:41 - Verified logo on home page Successfully
-2023-10-11 14:29:21 INFO  Log:28 - XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX
-2023-10-11 14:29:21 INFO  Log:30 - X
-2023-10-11 14:29:21 INFO  Log:32 - X
-2023-10-11 14:29:21 INFO  Log:34 - X
-2023-10-11 14:29:21 INFO  Log:36 - X
-2023-10-11 14:29:21 WARN  WebSocketHandler:142 - onError
-java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2023-10-11 14:29:21 INFO  Log:41 - Loading Property file
-2023-10-11 14:29:21 INFO  Log:41 - Chrome Browser started
-2023-10-11 14:29:23 INFO  Log:41 - Chrome driver initialized
-2023-10-11 14:29:23 INFO  Log:41 - Delete All cookies
-2023-10-11 14:29:23 INFO  Log:41 - Maximize Chrome Driver
-2023-10-11 14:29:23 INFO  Log:15 - ****************************************************************************************
-2023-10-11 14:29:23 INFO  Log:17 - ****************************************************************************************
-2023-10-11 14:29:23 INFO  Log:19 - $$$$$$$$$$$$$$$$$$$$$                 Launch The application URL::http://localhost:8888/       $$$$$$$$$$$$$$$$$$$$$$$$$
-2023-10-11 14:29:23 INFO  Log:21 - ****************************************************************************************
-2023-10-11 14:29:23 INFO  Log:23 - ****************************************************************************************
-2023-10-11 14:29:24 INFO  Log:41 - Loading Property file
-2023-10-11 14:29:24 INFO  Log:41 - Loading Property file
-2023-10-11 14:29:24 INFO  Log:41 - Entering username
-2023-10-11 14:29:24 INFO  Log:41 - Entered username successfully
-2023-10-11 14:29:24 INFO  Log:41 - Entering password
-2023-10-11 14:29:24 INFO  Log:41 - Entered password successfully
-2023-10-11 14:29:27 INFO  Log:41 - clicking on Submit button
-2023-10-11 14:29:28 INFO  Log:41 - clicked on Submit button successfully
-2023-10-11 14:29:28 INFO  Log:41 - Verifying the error message
-2023-10-11 14:29:28 INFO  Log:41 - Verified error message successfully
-2023-10-11 14:29:34 INFO  Log:28 - XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX
-2023-10-11 14:29:34 INFO  Log:30 - X
-2023-10-11 14:29:34 INFO  Log:32 - X
-2023-10-11 14:29:34 INFO  Log:34 - X
-2023-10-11 14:29:34 INFO  Log:36 - X
-2023-10-11 14:30:58 INFO  Log:41 - Loading Property file
-2023-10-11 14:30:58 INFO  Log:41 - Chrome Browser started
-2023-10-11 14:31:01 INFO  Log:41 - Chrome driver initialized
-2023-10-11 14:31:01 INFO  Log:41 - Delete All cookies
-2023-10-11 14:31:01 INFO  Log:41 - Maximize Chrome Driver
-2023-10-11 14:31:01 INFO  Log:15 - ****************************************************************************************
-2023-10-11 14:31:01 INFO  Log:17 - ****************************************************************************************
-2023-10-11 14:31:01 INFO  Log:19 - $$$$$$$$$$$$$$$$$$$$$                 Launch The application URL::http://localhost:8888/       $$$$$$$$$$$$$$$$$$$$$$$$$
-2023-10-11 14:31:01 INFO  Log:21 - ****************************************************************************************
-2023-10-11 14:31:01 INFO  Log:23 - ****************************************************************************************
-2023-10-11 14:31:02 INFO  Log:41 - Loading Property file
-2023-10-11 14:31:02 INFO  Log:41 - Loading Property file
-2023-10-11 14:31:02 INFO  Log:41 - Entering username
-2023-10-11 14:31:02 INFO  Log:41 - Entered username successfully
-2023-10-11 14:31:02 INFO  Log:41 - Entering password
-2023-10-11 14:31:02 INFO  Log:41 - Entered password successfully
-2023-10-11 14:31:05 INFO  Log:41 - clicking on Submit button
-2023-10-11 14:31:08 INFO  Log:41 - clicked on Submit button successfully
-2023-10-11 14:31:08 INFO  Log:41 - Verifying logo on home page
-2023-10-11 14:31:14 INFO  Log:41 - Verified logo on home page Successfully
-2023-10-11 14:31:14 INFO  Log:28 - XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX
-2023-10-11 14:31:14 INFO  Log:30 - X
-2023-10-11 14:31:14 INFO  Log:32 - X
-2023-10-11 14:31:14 INFO  Log:34 - X
-2023-10-11 14:31:14 INFO  Log:36 - X
-2023-10-11 14:31:14 INFO  Log:41 - Loading Property file
-2023-10-11 14:31:14 INFO  Log:41 - Chrome Browser started
-2023-10-11 14:31:16 INFO  Log:41 - Chrome driver initialized
-2023-10-11 14:31:16 INFO  Log:41 - Delete All cookies
-2023-10-11 14:31:16 INFO  Log:41 - Maximize Chrome Driver
-2023-10-11 14:31:16 INFO  Log:15 - ****************************************************************************************
-2023-10-11 14:31:16 INFO  Log:17 - ****************************************************************************************
-2023-10-11 14:31:16 INFO  Log:19 - $$$$$$$$$$$$$$$$$$$$$                 Launch The application URL::http://localhost:8888/       $$$$$$$$$$$$$$$$$$$$$$$$$
-2023-10-11 14:31:16 INFO  Log:21 - ****************************************************************************************
-2023-10-11 14:31:16 INFO  Log:23 - ****************************************************************************************
-2023-10-11 14:31:17 INFO  Log:41 - Loading Property file
-2023-10-11 14:31:17 INFO  Log:41 - Loading Property file
-2023-10-11 14:31:17 INFO  Log:41 - Entering username
-2023-10-11 14:31:17 INFO  Log:41 - Entered username successfully
-2023-10-11 14:31:17 INFO  Log:41 - Entering password
-2023-10-11 14:31:17 INFO  Log:41 - Entered password successfully
-2023-10-11 14:31:20 INFO  Log:41 - clicking on Submit button
-2023-10-11 14:31:21 INFO  Log:41 - clicked on Submit button successfully
-2023-10-11 14:31:21 INFO  Log:41 - Verifying the error message
-2023-10-11 14:31:21 INFO  Log:41 - Verified error message successfully
-2023-10-11 14:31:27 INFO  Log:28 - XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX
-2023-10-11 14:31:27 INFO  Log:30 - X
-2023-10-11 14:31:27 INFO  Log:32 - X
-2023-10-11 14:31:27 INFO  Log:34 - X
-2023-10-11 14:31:27 INFO  Log:36 - X
+2023-10-11 21:30:42 INFO  Log:41 - Loading Property file
+2023-10-11 21:30:42 INFO  Log:41 - Chrome Browser started
+2023-10-11 21:30:48 INFO  Log:41 - Chrome driver initialized
+2023-10-11 21:30:48 INFO  Log:41 - Delete All cookies
+2023-10-11 21:30:48 INFO  Log:41 - Maximize Chrome Driver
+2023-10-11 21:30:48 INFO  Log:15 - ****************************************************************************************
+2023-10-11 21:30:48 INFO  Log:17 - ****************************************************************************************
+2023-10-11 21:30:48 INFO  Log:19 - $$$$$$$$$$$$$$$$$$$$$                 Launch The application URL::http://localhost:8888/       $$$$$$$$$$$$$$$$$$$$$$$$$
+2023-10-11 21:30:48 INFO  Log:21 - ****************************************************************************************
+2023-10-11 21:30:48 INFO  Log:23 - ****************************************************************************************
+2023-10-11 21:30:50 INFO  Log:41 - Loading Property file
+2023-10-11 21:30:50 INFO  Log:41 - Loading Property file
+2023-10-11 21:30:50 INFO  Log:41 - Entering username
+2023-10-11 21:30:50 INFO  Log:41 - Entered username successfully
+2023-10-11 21:30:50 INFO  Log:41 - Entering password
+2023-10-11 21:30:51 INFO  Log:41 - Entered password successfully
+2023-10-11 21:30:54 INFO  Log:41 - clicking on Submit button
+2023-10-11 21:30:58 INFO  Log:41 - clicked on Submit button successfully
+2023-10-11 21:30:58 INFO  Log:41 - Verifying logo on home page
+2023-10-11 21:31:04 INFO  Log:41 - Verified logo on home page Successfully
+2023-10-11 21:31:05 INFO  Log:41 - Loading Property file
+2023-10-11 21:31:05 INFO  Log:41 - Chrome Browser started
+2023-10-11 21:31:08 INFO  Log:41 - Chrome driver initialized
+2023-10-11 21:31:08 INFO  Log:41 - Delete All cookies
+2023-10-11 21:31:08 INFO  Log:41 - Maximize Chrome Driver
+2023-10-11 21:31:08 INFO  Log:15 - ****************************************************************************************
+2023-10-11 21:31:08 INFO  Log:17 - ****************************************************************************************
+2023-10-11 21:31:08 INFO  Log:19 - $$$$$$$$$$$$$$$$$$$$$                 Launch The application URL::http://localhost:8888/       $$$$$$$$$$$$$$$$$$$$$$$$$
+2023-10-11 21:31:08 INFO  Log:21 - ****************************************************************************************
+2023-10-11 21:31:08 INFO  Log:23 - ****************************************************************************************
+2023-10-11 21:31:09 INFO  Log:41 - Loading Property file
+2023-10-11 21:31:09 INFO  Log:41 - Loading Property file
+2023-10-11 21:31:09 INFO  Log:41 - Entering username
+2023-10-11 21:31:10 INFO  Log:41 - Entered username successfully
+2023-10-11 21:31:10 INFO  Log:41 - Entering password
+2023-10-11 21:31:11 INFO  Log:41 - Entered password successfully
+2023-10-11 21:31:14 INFO  Log:41 - clicking on Submit button
+2023-10-11 21:31:16 INFO  Log:41 - clicked on Submit button successfully
+2023-10-11 21:31:16 INFO  Log:41 - Verifying the error message
+2023-10-11 22:55:49 INFO  Log:41 - Loading Property file
+2023-10-11 22:55:49 INFO  Log:41 - Chrome Browser started
+2023-10-11 22:55:57 INFO  Log:41 - Chrome driver initialized
+2023-10-11 22:55:57 INFO  Log:41 - Delete All cookies
+2023-10-11 22:55:57 INFO  Log:41 - Maximize Chrome Driver
+2023-10-11 22:55:57 INFO  Log:15 - ****************************************************************************************
+2023-10-11 22:55:57 INFO  Log:17 - ****************************************************************************************
+2023-10-11 22:55:57 INFO  Log:19 - $$$$$$$$$$$$$$$$$$$$$                 Launch The application URL::http://localhost:8888/       $$$$$$$$$$$$$$$$$$$$$$$$$
+2023-10-11 22:55:57 INFO  Log:21 - ****************************************************************************************
+2023-10-11 22:55:57 INFO  Log:23 - ****************************************************************************************
+2023-10-11 22:55:59 INFO  Log:41 - Loading Property file
+2023-10-11 22:55:59 INFO  Log:41 - Loading Property file
+2023-10-11 22:55:59 INFO  Log:41 - Entering username
+2023-10-11 22:55:59 INFO  Log:41 - Entered username successfully
+2023-10-11 22:55:59 INFO  Log:41 - Entering password
+2023-10-11 22:56:00 INFO  Log:41 - Entered password successfully
+2023-10-11 22:56:03 INFO  Log:41 - clicking on Submit button
+2023-10-11 22:56:08 INFO  Log:41 - clicked on Submit button successfully
+2023-10-11 22:56:08 INFO  Log:41 - Verifying logo on home page
+2023-10-11 22:56:14 INFO  Log:41 - Verified logo on home page Successfully
+2023-10-11 22:56:15 INFO  Log:41 - Loading Property file
+2023-10-11 22:56:15 INFO  Log:41 - Chrome Browser started
+2023-10-11 22:56:19 INFO  Log:41 - Chrome driver initialized
+2023-10-11 22:56:19 INFO  Log:41 - Delete All cookies
+2023-10-11 22:56:19 INFO  Log:41 - Maximize Chrome Driver
+2023-10-11 22:56:19 INFO  Log:15 - ****************************************************************************************
+2023-10-11 22:56:19 INFO  Log:17 - ****************************************************************************************
+2023-10-11 22:56:19 INFO  Log:19 - $$$$$$$$$$$$$$$$$$$$$                 Launch The application URL::http://localhost:8888/       $$$$$$$$$$$$$$$$$$$$$$$$$
+2023-10-11 22:56:19 INFO  Log:21 - ****************************************************************************************
+2023-10-11 22:56:19 INFO  Log:23 - ****************************************************************************************
+2023-10-11 22:56:21 INFO  Log:41 - Loading Property file
+2023-10-11 22:56:21 INFO  Log:41 - Loading Property file
+2023-10-11 22:56:21 INFO  Log:41 - Entering username
+2023-10-11 22:56:21 INFO  Log:41 - Entered username successfully
+2023-10-11 22:56:21 INFO  Log:41 - Entering password
+2023-10-11 22:56:22 INFO  Log:41 - Entered password successfully
+2023-10-11 22:56:25 INFO  Log:41 - clicking on Submit button
+2023-10-11 22:56:28 INFO  Log:41 - clicked on Submit button successfully
+2023-10-11 22:56:28 INFO  Log:41 - Verifying the error message
+2023-10-11 22:56:28 INFO  Log:41 - Verified error message successfully
+2023-10-11 23:07:09 INFO  Log:41 - Loading Property file
+2023-10-11 23:07:09 INFO  Log:41 - Chrome Browser started
+2023-10-11 23:07:16 INFO  Log:41 - Chrome driver initialized
+2023-10-11 23:07:16 INFO  Log:41 - Delete All cookies
+2023-10-11 23:07:17 INFO  Log:41 - Maximize Chrome Driver
+2023-10-11 23:07:17 INFO  Log:15 - ****************************************************************************************
+2023-10-11 23:07:17 INFO  Log:17 - ****************************************************************************************
+2023-10-11 23:07:17 INFO  Log:19 - $$$$$$$$$$$$$$$$$$$$$                 Launch The application URL::http://localhost:8888/       $$$$$$$$$$$$$$$$$$$$$$$$$
+2023-10-11 23:07:17 INFO  Log:21 - ****************************************************************************************
+2023-10-11 23:07:17 INFO  Log:23 - ****************************************************************************************
+2023-10-11 23:07:18 INFO  Log:41 - Loading Property file
+2023-10-11 23:07:18 INFO  Log:41 - Loading Property file
+2023-10-11 23:07:18 INFO  Log:41 - Entering username
+2023-10-11 23:07:18 INFO  Log:41 - Entered username successfully
+2023-10-11 23:07:18 INFO  Log:41 - Entering password
+2023-10-11 23:07:19 INFO  Log:41 - Entered password successfully
+2023-10-11 23:07:22 INFO  Log:41 - clicking on Submit button
+2023-10-11 23:07:26 INFO  Log:41 - clicked on Submit button successfully
+2023-10-11 23:07:26 INFO  Log:41 - Verifying logo on home page
+2023-10-11 23:07:32 INFO  Log:41 - Verified logo on home page Successfully
+2023-10-11 23:07:33 INFO  Log:41 - Loading Property file
+2023-10-11 23:07:33 INFO  Log:41 - Chrome Browser started
+2023-10-11 23:07:36 INFO  Log:41 - Chrome driver initialized
+2023-10-11 23:07:36 INFO  Log:41 - Delete All cookies
+2023-10-11 23:07:37 INFO  Log:41 - Maximize Chrome Driver
+2023-10-11 23:07:37 INFO  Log:15 - ****************************************************************************************
+2023-10-11 23:07:37 INFO  Log:17 - ****************************************************************************************
+2023-10-11 23:07:37 INFO  Log:19 - $$$$$$$$$$$$$$$$$$$$$                 Launch The application URL::http://localhost:8888/       $$$$$$$$$$$$$$$$$$$$$$$$$
+2023-10-11 23:07:37 INFO  Log:21 - ****************************************************************************************
+2023-10-11 23:07:37 INFO  Log:23 - ****************************************************************************************
+2023-10-11 23:07:38 INFO  Log:41 - Loading Property file
+2023-10-11 23:07:38 INFO  Log:41 - Loading Property file
+2023-10-11 23:07:38 INFO  Log:41 - Entering username
+2023-10-11 23:07:39 INFO  Log:41 - Entered username successfully
+2023-10-11 23:07:39 INFO  Log:41 - Entering password
+2023-10-11 23:07:39 INFO  Log:41 - Entered password successfully
+2023-10-11 23:07:42 INFO  Log:41 - clicking on Submit button
+2023-10-11 23:07:44 INFO  Log:41 - clicked on Submit button successfully
+2023-10-11 23:07:45 INFO  Log:41 - Verifying the error message
+2023-10-11 23:07:45 INFO  Log:41 - Verified error message successfully
