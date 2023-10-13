@@ -1,6 +1,10 @@
 package utils;
 
 
+import com.aventstack.extentreports.ExtentTest;
+
+import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
+import io.cucumber.java.Scenario;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -11,16 +15,8 @@ import java.io.IOException;
 
 public class CommonMethods {
 
-    public static void takeScreenshot(String screenShotName){
-        TakesScreenshot screenshot=(TakesScreenshot) Driver.driver;
-        File file =screenshot.getScreenshotAs(OutputType.FILE);
-        try {
-            FileUtils.copyFile(file, new File(System.getProperty("user.dir")+"\\reports\\" + screenShotName + ".png"));
-        }catch (IOException e){
-            e.printStackTrace();
-        }
 
-    }
+
 
 
     //this method is use for decode the password, as we will not save the actual password

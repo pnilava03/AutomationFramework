@@ -37,20 +37,22 @@ public class LoginSteps  {
     public void theUserShouldBeNavigateToTheUserSpecificHomepage() throws InterruptedException {
         HomePage homePage= new HomePage(Driver.driver);
         homePage.verifyHomePage();
+        Log.endTestCases("application closed");
 
     }
 
     @Then("the user close the browser")
     public void theUserCloseTheBrowser() {
-        Driver.driver.close();
-        Log.endTestCases("application closed");
+        Driver.driver.quit();
+
     }
 
     @Then("the user will see error message {string}")
-    public void theUserWillSeeErrorMessage(String message) throws InterruptedException {
+    public void theUserWillSeeErrorMessage(String message) throws InterruptedException, IOException {
         LoginPage loginPage= new LoginPage(Driver.driver);
         loginPage.verifyErrorMessage(message);
         Thread.sleep(5000);
+        Log.endTestCases("application closed");
 
 
     }

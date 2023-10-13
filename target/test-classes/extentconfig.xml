@@ -13,7 +13,7 @@
         <!-- protocol for script and stylesheets -->
         <!-- defaults to https -->
         <!-- HTTP, HTTPS -->
-        <protocol>HTTP</protocol>
+        <protocol>HTTPS</protocol>
 
         <!-- offline report -->
         <timelineEnabled>true</timelineEnabled>
@@ -21,7 +21,7 @@
         <!-- offline report -->
         <offlineMode>true</offlineMode>
 
-        <thumbnailForBase64>false</thumbnailForBase64>
+        <thumbnailForBase64>true</thumbnailForBase64>
 
         <!-- title of the document -->
         <documentTitle>Test Automation Results</documentTitle>

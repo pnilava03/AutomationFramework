@@ -1,5 +1,6 @@
 package pageObjects;
 
+import io.cucumber.java.Scenario;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,50 +11,55 @@ import utils.Log;
 import utils.CommonMethods;
 import utils.Reports;
 
-public class LoginPage{
+import java.io.IOException;
 
-    CommonMethods commonMethods= new CommonMethods();
-    public LoginPage(WebDriver driver){
+public class LoginPage {
+
+    CommonMethods commonMethods = new CommonMethods();
+
+    public LoginPage(WebDriver driver) {
         PageFactory.initElements(driver, this);
 
     }
-    @FindBy(how= How.XPATH, using="//input[@name='user_name']")
+
+    @FindBy(how = How.XPATH, using = "//input[@name='user_name']")
     WebElement enterUserName;
 
 
-    @FindBy(how=How.XPATH,using="//input[@name='user_password']")
+    @FindBy(how = How.XPATH, using = "//input[@name='user_password']")
     WebElement enterPassWord;
 
-    @FindBy(how=How.ID,using="submitButton")
+    @FindBy(how = How.ID, using = "submitButton")
     WebElement clickOnSubmitButton;
 
-    @FindBy(how=How.XPATH, using = "//div[@class='errorMessage']")
+    @FindBy(how = How.XPATH, using = "//div[@class='errorMessage']")
     WebElement errorMessage;
 
-    public void login_To_The_Application(String userName, String passWord) throws InterruptedException {
+    public void login_To_The_Application(String userName, String passWord) throws InterruptedException, IOException {
         Log.info("Entering username");
         enterUserName.sendKeys(userName);
-        CommonMethods.takeScreenshot("username");
         Log.info("Entered username successfully");
+        Reports.takeScreenshot("UserName", "Entered username");
         //decoding password
         Log.info("Entering password");
-        String decode_Password=commonMethods.decodePassword(passWord);
+        String decode_Password = commonMethods.decodePassword(passWord);
         enterPassWord.sendKeys(decode_Password);
-        CommonMethods.takeScreenshot("password");
         Log.info("Entered password successfully");
+        Reports.takeScreenshot("Password", "Entered password");
+
         Thread.sleep(3000);
         Log.info("clicking on Submit button");
         clickOnSubmitButton.click();
         Log.info("clicked on Submit button successfully");
-        CommonMethods.takeScreenshot("submitButton");
+        Reports.takeScreenshot("SubmitButton", "clicked on Submit button");
     }
 
-    public void verifyErrorMessage(String expectedValue){
+    public void verifyErrorMessage(String expectedValue) throws IOException {
         Log.info("Verifying the error message");
-      String actualValue=errorMessage.getText();
-      Assert.assertEquals(actualValue,expectedValue);
+        String actualValue = errorMessage.getText();
+        Assert.assertEquals(actualValue, expectedValue);
         Log.info("Verified error message successfully");
-        CommonMethods.takeScreenshot("errMsg");
+        Reports.takeScreenshot("ErrorMsg", "Error message verified");
 
     }
 

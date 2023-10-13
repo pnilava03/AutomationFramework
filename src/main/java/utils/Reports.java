@@ -2,29 +2,26 @@ package utils;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.Status;
+
+import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 
 import java.awt.*;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Base64;
+
+//import static com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.getCurrentStep;
 
 public class Reports {
 
     public static ExtentSparkReporter reporter = new ExtentSparkReporter(System.getProperty("user.dir") + "\\reports\\vTigerReport.html");
-    public static ExtentSparkReporter failedReporter= new ExtentSparkReporter(System.getProperty("user.dir") + "\\reports\\vTigerFailReport.html").filter().statusFilter().as(new Status[] {Status.FAIL, Status.SKIP}).apply();
+    public static ExtentSparkReporter failedReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "\\reports\\vTigerFailReport.html").filter().statusFilter().as(new Status[]{Status.FAIL, Status.SKIP}).apply();
 
     public static ExtentReports extentReports;
     static final File file = new File("./src/test/resources/config/extentconfig.xml");
-
 
 
     public static ExtentReports attachReport(String projectName) {
@@ -43,7 +40,7 @@ public class Reports {
         return extentReports;
     }
 
-    public static void openReport(){
+    public static void openReport() {
         try {
             Desktop.getDesktop().browse(new File(System.getProperty("user.dir") + "\\reports\\vTigerReport.html").toURI());
             try {
@@ -58,15 +55,23 @@ public class Reports {
 
     }
 
-    public static String attachScreenShots(String screenShotName) throws  Exception{
-        File source=((TakesScreenshot)Driver.driver).getScreenshotAs(OutputType.FILE);
-        String path=System.getProperty("user.dir")+"/reports/"+screenShotName+".png";
-        FileUtils.copyFile(source,new File(path) );
-        byte[] imageBytes= IOUtils.toByteArray(Files.newInputStream(Paths.get(path)));
-        return Base64.getEncoder().encodeToString(imageBytes);
 
+//  //  public static void addStepLogs(String msg){
+//        getCurrentStep().info(msg);
+//    }
 
+    public static String takeScreenshot(String screenShotName, String msg) throws IOException {
+       TakesScreenshot takesScreenshot=(TakesScreenshot)Driver.driver;
+       File file =takesScreenshot.getScreenshotAs(OutputType.FILE);
+       String imagePath=System.getProperty("user.dir")+"\\reports\\Screenshots\\"+screenShotName+".png";
+       FileUtils.copyFile(file, new File(imagePath));
+       ExtentCucumberAdapter.addTestStepLog(msg);
+       ExtentCucumberAdapter.addTestStepScreenCaptureFromPath(imagePath);
+
+        return imagePath;
     }
+
+
 
 }
 
