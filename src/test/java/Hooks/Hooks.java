@@ -18,7 +18,7 @@ public class Hooks {
 
     @Before
     public void setup(){
-        Log.info("      -:V-Tiger Automation Project is Running:-       ");
+        Log.info("      -:actiTime Automation Project is Running:-       ");
     }
     @AfterStep
     public void attachScreenShot(Scenario scenario) throws Exception {

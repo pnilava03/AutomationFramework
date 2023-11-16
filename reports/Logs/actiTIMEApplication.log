@@ -1,0 +1,54 @@
+2023-11-16 23:54:11 INFO  Log:41 -       -:actiTime Automation Project is Running:-       
+2023-11-16 23:54:11 INFO  Log:41 - Loading Property file
+2023-11-16 23:54:11 INFO  Log:41 - Chrome Browser started
+2023-11-16 23:54:13 INFO  Log:41 - Chrome driver initialized
+2023-11-16 23:54:13 INFO  Log:41 - Delete All cookies
+2023-11-16 23:54:13 INFO  Log:41 - Maximize Chrome Driver
+2023-11-16 23:54:13 INFO  Log:15 - ****************************************************************************************
+2023-11-16 23:54:13 INFO  Log:17 - ****************************************************************************************
+2023-11-16 23:54:13 INFO  Log:19 - $$$$$$$$$$$$$$$$$$$$$                 Launch The application URL::http://localhost/login.do       $$$$$$$$$$$$$$$$$$$$$$$$$
+2023-11-16 23:54:13 INFO  Log:21 - ****************************************************************************************
+2023-11-16 23:54:13 INFO  Log:23 - ****************************************************************************************
+2023-11-16 23:54:14 INFO  Log:41 - Loading Property file
+2023-11-16 23:54:14 INFO  Log:41 - Loading Property file
+2023-11-16 23:54:14 INFO  Log:41 - Entering username
+2023-11-16 23:54:14 INFO  Log:41 - Entered username successfully
+2023-11-16 23:54:14 INFO  Log:41 - Entering password
+2023-11-16 23:54:14 INFO  Log:41 - Entered password successfully
+2023-11-16 23:54:17 INFO  Log:41 - clicking on Submit button
+2023-11-16 23:54:18 INFO  Log:41 - clicked on Submit button successfully
+2023-11-16 23:54:19 INFO  Log:41 - Verifying logo on home page
+2023-11-16 23:54:25 INFO  Log:41 - Verified logo on home page Successfully
+2023-11-16 23:54:25 INFO  Log:28 - XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX
+2023-11-16 23:54:25 INFO  Log:30 - X
+2023-11-16 23:54:25 INFO  Log:32 - X
+2023-11-16 23:54:25 INFO  Log:34 - X
+2023-11-16 23:54:25 INFO  Log:36 - X
+2023-11-16 23:54:25 INFO  Log:41 - Closing the Browser
+2023-11-16 23:54:25 INFO  Log:41 -       -:actiTime Automation Project is Running:-       
+2023-11-16 23:54:25 INFO  Log:41 - Loading Property file
+2023-11-16 23:54:25 INFO  Log:41 - Chrome Browser started
+2023-11-16 23:54:26 INFO  Log:41 - Chrome driver initialized
+2023-11-16 23:54:26 INFO  Log:41 - Delete All cookies
+2023-11-16 23:54:26 INFO  Log:41 - Maximize Chrome Driver
+2023-11-16 23:54:26 INFO  Log:15 - ****************************************************************************************
+2023-11-16 23:54:26 INFO  Log:17 - ****************************************************************************************
+2023-11-16 23:54:26 INFO  Log:19 - $$$$$$$$$$$$$$$$$$$$$                 Launch The application URL::http://localhost/login.do       $$$$$$$$$$$$$$$$$$$$$$$$$
+2023-11-16 23:54:26 INFO  Log:21 - ****************************************************************************************
+2023-11-16 23:54:26 INFO  Log:23 - ****************************************************************************************
+2023-11-16 23:54:27 INFO  Log:41 - Loading Property file
+2023-11-16 23:54:27 INFO  Log:41 - Loading Property file
+2023-11-16 23:54:27 INFO  Log:41 - Entering username
+2023-11-16 23:54:27 INFO  Log:41 - Entered username successfully
+2023-11-16 23:54:27 INFO  Log:41 - Entering password
+2023-11-16 23:54:27 INFO  Log:41 - Entered password successfully
+2023-11-16 23:54:30 INFO  Log:41 - clicking on Submit button
+2023-11-16 23:54:31 INFO  Log:41 - clicked on Submit button successfully
+2023-11-16 23:54:31 INFO  Log:41 - Verifying the error message
+2023-11-16 23:54:31 INFO  Log:41 - Verified error message successfully
+2023-11-16 23:54:36 INFO  Log:28 - XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX
+2023-11-16 23:54:36 INFO  Log:30 - X
+2023-11-16 23:54:36 INFO  Log:32 - X
+2023-11-16 23:54:36 INFO  Log:34 - X
+2023-11-16 23:54:36 INFO  Log:36 - X
+2023-11-16 23:54:36 INFO  Log:41 - Closing the Browser

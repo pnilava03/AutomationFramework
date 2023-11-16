@@ -18,7 +18,7 @@ public class LoginSteps  {
     public void theApplication(String url) throws Exception {
 
 
-        url= PropertiesFile.getProperties("vTiger_URL");
+        url= PropertiesFile.getProperties("actiTime_URL");
         Log.info("Chrome Browser started");
         Driver.openBrowser("chrome");
         Log.startTestCases("Launch The application URL::"+url);

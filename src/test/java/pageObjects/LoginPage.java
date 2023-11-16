@@ -22,17 +22,17 @@ public class LoginPage {
 
     }
 
-    @FindBy(how = How.XPATH, using = "//input[@name='user_name']")
+    @FindBy(how = How.XPATH, using = "//input[@name='username']")
     WebElement enterUserName;
 
 
-    @FindBy(how = How.XPATH, using = "//input[@name='user_password']")
+    @FindBy(how = How.XPATH, using = "//input[@name='pwd']")
     WebElement enterPassWord;
 
-    @FindBy(how = How.ID, using = "submitButton")
+    @FindBy(how = How.ID, using = "loginButton")
     WebElement clickOnSubmitButton;
 
-    @FindBy(how = How.XPATH, using = "//div[@class='errorMessage']")
+    @FindBy(how = How.XPATH, using = "(//td/span[@class='errormsg'])[1]")
     WebElement errorMessage;
 
     public void login_To_The_Application(String userName, String passWord) throws InterruptedException, IOException {

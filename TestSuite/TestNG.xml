@@ -4,7 +4,7 @@
 <!--<listeners>-->
 <!--    <listener class-name="runners.Listeners"/>-->
 <!--</listeners>-->
-    <test name="vTiger Project">
+    <test name="actiTIME Project">
         <classes>
             <class name="runners.TestRunner"/>
         </classes>
