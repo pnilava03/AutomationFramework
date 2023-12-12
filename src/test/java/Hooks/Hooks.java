@@ -1,10 +1,7 @@
 package Hooks;
 import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
 import com.aventstack.extentreports.model.Report;
-import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
-import io.cucumber.java.Before;
-import io.cucumber.java.Scenario;
+import io.cucumber.java.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -16,22 +13,25 @@ import java.util.Arrays;
 
 public class Hooks {
 
+public static Scenario message;
+
+
     @Before
     public void setup(){
         Log.info("      -:actiTime Automation Project is Running:-       ");
     }
+
+    @BeforeStep
+    public void beforeStep(){
+        Log.info("============= Executing Steps =============");
+    }
     @AfterStep
     public void attachScreenShot(Scenario scenario) throws Exception {
-        TakesScreenshot screenshot=(TakesScreenshot) Driver.driver;
-        final byte[] screenShots=screenshot.getScreenshotAs(OutputType.BYTES);
-        ExtentCucumberAdapter.addTestStepLog(scenario.toString());
-        scenario.attach(screenShots,"image/png","image");
-
-
-
-
+        Reports.message=scenario;
 
     }
+
+
 
     @After
     public void tearDown(){

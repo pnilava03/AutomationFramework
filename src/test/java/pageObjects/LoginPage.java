@@ -39,19 +39,19 @@ public class LoginPage {
         Log.info("Entering username");
         enterUserName.sendKeys(userName);
         Log.info("Entered username successfully");
-        Reports.takeScreenshot("UserName", "Entered username");
+        Reports.takeScreenshot("Entered username");
         //decoding password
         Log.info("Entering password");
         String decode_Password = commonMethods.decodePassword(passWord);
         enterPassWord.sendKeys(decode_Password);
         Log.info("Entered password successfully");
-        Reports.takeScreenshot("Password", "Entered password");
+        Reports.takeScreenshot("Entered password");
 
         Thread.sleep(3000);
         Log.info("clicking on Submit button");
         clickOnSubmitButton.click();
         Log.info("clicked on Submit button successfully");
-        Reports.takeScreenshot("SubmitButton", "clicked on Submit button");
+        Reports.takeScreenshot("clicked on Submit button");
     }
 
     public void verifyErrorMessage(String expectedValue) throws IOException {
@@ -59,7 +59,7 @@ public class LoginPage {
         String actualValue = errorMessage.getText();
         Assert.assertEquals(actualValue, expectedValue);
         Log.info("Verified error message successfully");
-        Reports.takeScreenshot("ErrorMsg", "Error message verified");
+        Reports.takeScreenshot("Error message verified");
 
     }
 

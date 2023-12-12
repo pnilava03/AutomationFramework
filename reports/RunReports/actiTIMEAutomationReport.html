@@ -49,7 +49,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Nov 16, 2023 11:54:10 pm</span>
+			<span class='label blue darken-3 suite-start-time'>Dec 9, 2023 09:20:25 pm</span>
 			</a>
 		</ul>
 	</div>
@@ -157,7 +157,7 @@
                 </div>
                 <div class='block text-small'>
                     <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>12</span> steps passed</span>
+                    <span class='strong'>6</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -186,8 +186,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>VT-001 As a user , I should be able to login to vTiger application</span>
-						<span class='test-time'>Nov 16, 2023 11:54:11 pm</span>
+						<span class='test-name'>As a actiTIME user , I should be able to login to actiTIME application</span>
+						<span class='test-time'>Dec 9, 2023 09:20:26 pm</span>
 						<span class='test-status right pass'>Pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -200,7 +200,7 @@
 
 <div class='scenario outline node' test-id='2' status='pass'>
 
-	<span class='duration right label'>00 00 14.315</span>
+	<span class='duration right label'>00 00 14.338</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: User should login to the application with valid credentials</div>
 	</div>
@@ -217,55 +217,45 @@
 				</div>
 
 			<ul class='gc steps'>
-				<li test-id='5' class='gc given Pass' status='Pass'>
+				<li test-id='6' class='gc given Pass' status='Pass'>
 					<h6 class="step-name" title="stepDefinitions.LoginSteps.theApplication(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given the application "actiTime_URL"</h6>
 
 				</li>
-				<li test-id='6' class='gc * Pass' status='Pass'>
-					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Hooks.Hooks.attachScreenShot(io.cucumber.java.Scenario)</h6>
-
-							<div class="node-step">io.cucumber.java.Scenario@670b3ca</div>
-							<div class="node-step">image</div>
-							<div class='screenshots'>
-								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded1.png' src='../Screenshots/embedded1.png'>
-							</div>
-				</li>
-				<li test-id='7' class='gc when Pass' status='Pass'>
+				<li test-id='9' class='gc when Pass' status='Pass'>
 					<h6 class="step-name" title="stepDefinitions.LoginSteps.theUserEntersTheCredentials(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user enters the credentials "valid_user","valid_password"</h6>
 
 							<div class="node-step">Entered username</div>
+							<div class="node-step"> </div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded1.png' src='../Screenshots/embedded1.png'>
+							</div>
 							<div class="node-step">Entered password</div>
-							<div class="node-step">clicked on Submit button</div>
-				</li>
-				<li test-id='8' class='gc * Pass' status='Pass'>
-					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Hooks.Hooks.attachScreenShot(io.cucumber.java.Scenario)</h6>
-
-							<div class="node-step">io.cucumber.java.Scenario@f9f3928</div>
-							<div class="node-step">image</div>
+							<div class="node-step"> </div>
 							<div class='screenshots'>
 								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded2.png' src='../Screenshots/embedded2.png'>
 							</div>
-				</li>
-				<li test-id='9' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="stepDefinitions.LoginSteps.theUserShouldBeNavigateToTheUserSpecificHomepage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should be navigate to the user specific homepage</h6>
-
-				</li>
-				<li test-id='10' class='gc * Pass' status='Pass'>
-					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Hooks.Hooks.attachScreenShot(io.cucumber.java.Scenario)</h6>
-
-							<div class="node-step">io.cucumber.java.Scenario@3ebe4ccc</div>
-							<div class="node-step">image</div>
+							<div class="node-step">clicked on Submit button</div>
+							<div class="node-step"> </div>
 							<div class='screenshots'>
 								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded3.png' src='../Screenshots/embedded3.png'>
+							</div>
+				</li>
+				<li test-id='12' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="stepDefinitions.LoginSteps.theUserShouldBeNavigateToTheUserSpecificHomepage()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should be navigate to the user specific homepage</h6>
+
+							<div class="node-step">Home Page verified</div>
+							<div class="node-step"> </div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded4.png' src='../Screenshots/embedded4.png'>
 							</div>
 				</li>
 			</ul>
 		</li>
 	</ul>
 </div>
-<div class='scenario outline node' test-id='12' status='pass'>
+<div class='scenario outline node' test-id='15' status='pass'>
 
-	<span class='duration right label'>00 00 11.574</span>
+	<span class='duration right label'>00 00 11.463</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: User should login to the application with Invalid credentials</div>
 	</div>
@@ -274,7 +264,7 @@
 	
 	
 	<ul class='steps'>
-		<li test-id='13' class='node scenario Pass' status='Pass'>
+		<li test-id='16' class='node scenario Pass' status='Pass'>
 			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>User should login to the application with Invalid credentials</div>
 
 				<div class='category-list'>
@@ -282,47 +272,36 @@
 				</div>
 
 			<ul class='gc steps'>
-				<li test-id='15' class='gc given Pass' status='Pass'>
+				<li test-id='19' class='gc given Pass' status='Pass'>
 					<h6 class="step-name" title="stepDefinitions.LoginSteps.theApplication(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given the application "actiTime_URL"</h6>
 
 				</li>
-				<li test-id='16' class='gc * Pass' status='Pass'>
-					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Hooks.Hooks.attachScreenShot(io.cucumber.java.Scenario)</h6>
-
-							<div class="node-step">io.cucumber.java.Scenario@62b93086</div>
-							<div class="node-step">image</div>
-							<div class='screenshots'>
-								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded4.png' src='../Screenshots/embedded4.png'>
-							</div>
-				</li>
-				<li test-id='17' class='gc when Pass' status='Pass'>
+				<li test-id='22' class='gc when Pass' status='Pass'>
 					<h6 class="step-name" title="stepDefinitions.LoginSteps.theUserEntersTheCredentials(java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user enters the credentials "inValid_user","inValid_password"</h6>
 
 							<div class="node-step">Entered username</div>
-							<div class="node-step">Entered password</div>
-							<div class="node-step">clicked on Submit button</div>
-				</li>
-				<li test-id='18' class='gc * Pass' status='Pass'>
-					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Hooks.Hooks.attachScreenShot(io.cucumber.java.Scenario)</h6>
-
-							<div class="node-step">io.cucumber.java.Scenario@3382cf68</div>
-							<div class="node-step">image</div>
+							<div class="node-step"> </div>
 							<div class='screenshots'>
 								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded5.png' src='../Screenshots/embedded5.png'>
 							</div>
+							<div class="node-step">Entered password</div>
+							<div class="node-step"> </div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded6.png' src='../Screenshots/embedded6.png'>
+							</div>
+							<div class="node-step">clicked on Submit button</div>
+							<div class="node-step"> </div>
+							<div class='screenshots'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded7.png' src='../Screenshots/embedded7.png'>
+							</div>
 				</li>
-				<li test-id='19' class='gc then Pass' status='Pass'>
+				<li test-id='25' class='gc then Pass' status='Pass'>
 					<h6 class="step-name" title="stepDefinitions.LoginSteps.theUserWillSeeErrorMessage(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user will see error message "Username or Password is invalid. Please try again."</h6>
 
 							<div class="node-step">Error message verified</div>
-				</li>
-				<li test-id='20' class='gc * Pass' status='Pass'>
-					<h6 class="step-name" title="AFTER_STEP"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Hooks.Hooks.attachScreenShot(io.cucumber.java.Scenario)</h6>
-
-							<div class="node-step">io.cucumber.java.Scenario@7be2f29a</div>
-							<div class="node-step">image</div>
+							<div class="node-step"> </div>
 							<div class='screenshots'>
-								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded6.png' src='../Screenshots/embedded6.png'>
+								<img width='80' height='40' onerror='this.style.display="none"' data-featherlight='../Screenshots/embedded8.png' src='../Screenshots/embedded8.png'>
 							</div>
 				</li>
 			</ul>
@@ -395,13 +374,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Nov 16, 2023 11:54:11 pm</td>
+										<td>Dec 9, 2023 09:20:26 pm</td>
 										<td class='linked' test-id='3'>User should login to the application with valid credentials</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 									<tr>
-										<td>Nov 16, 2023 11:54:25 pm</td>
-										<td class='linked' test-id='13'>User should login to the application with Invalid credentials</td>
+										<td>Dec 9, 2023 09:20:40 pm</td>
+										<td class='linked' test-id='16'>User should login to the application with Invalid credentials</td>
 										<td><span class='test-status Pass'>Pass</span></td>
 									</tr>
 								</tbody>
@@ -438,25 +417,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>12</div>
+					<div class='panel-lead'>6</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Nov 16, 2023 11:54:10 pm</div>
+					<div class='panel-lead'>Dec 9, 2023 09:20:25 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Nov 16, 2023 11:54:37 pm</div>
+			 		<div class='panel-lead'>Dec 9, 2023 09:20:52 pm</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 26.472</div>
+					<div class='panel-lead'>00 00 26.605</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -538,8 +517,8 @@
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
-				grandChildCount: 12,
-				passGrandChild: 12,
+				grandChildCount: 6,
+				passGrandChild: 6,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -551,7 +530,7 @@
 		
 		<script>
 			var timeline = {
-			        "VT-001 As a user , I should be able to login to vTiger application":25.899
+			        "As a actiTIME user , I should be able to login to actiTIME application":25.822
 			};
 		</script>
 		

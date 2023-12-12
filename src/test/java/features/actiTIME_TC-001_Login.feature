@@ -1,4 +1,4 @@
-Feature: VT-001 As a user , I should be able to login to vTiger application
+Feature: As a actiTIME user , I should be able to login to actiTIME application
 
   @Sanity
   Scenario Outline: User should login to the application with valid credentials

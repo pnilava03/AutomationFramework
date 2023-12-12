@@ -5,6 +5,7 @@ import com.aventstack.extentreports.Status;
 
 import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import io.cucumber.java.Scenario;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -12,6 +13,8 @@ import org.openqa.selenium.TakesScreenshot;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Random;
 
 //import static com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.getCurrentStep;
 
@@ -60,15 +63,17 @@ public class Reports {
 //        getCurrentStep().info(msg);
 //    }
 
-    public static String takeScreenshot(String screenShotName, String msg) throws IOException {
-       TakesScreenshot takesScreenshot=(TakesScreenshot)Driver.driver;
-       File file =takesScreenshot.getScreenshotAs(OutputType.FILE);
-       String imagePath=System.getProperty("user.dir")+"\\reports\\Screenshots\\"+screenShotName+".png";
-       FileUtils.copyFile(file, new File(imagePath));
-       ExtentCucumberAdapter.addTestStepLog(msg);
-       ExtentCucumberAdapter.addTestStepScreenCaptureFromPath(imagePath);
+    public static Scenario message;
+    public static void takeScreenshot(String msg) throws IOException {
 
-        return imagePath;
+       TakesScreenshot takesScreenshot=(TakesScreenshot)Driver.driver;
+      byte[] screenshot=takesScreenshot.getScreenshotAs(OutputType.BYTES);
+        ExtentCucumberAdapter.addTestStepLog(msg);
+       message.attach(screenshot,"image/png"," ");
+
+
+
+
     }
 
 

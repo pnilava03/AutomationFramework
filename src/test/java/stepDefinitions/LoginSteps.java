@@ -34,7 +34,7 @@ public class LoginSteps  {
     }
 
     @Then("the user should be navigate to the user specific homepage")
-    public void theUserShouldBeNavigateToTheUserSpecificHomepage() throws InterruptedException {
+    public void theUserShouldBeNavigateToTheUserSpecificHomepage() throws InterruptedException, IOException {
         HomePage homePage= new HomePage(Driver.driver);
         homePage.verifyHomePage();
         Log.endTestCases("application closed");

@@ -8,6 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import utils.CommonMethods;
 import utils.Log;
+import utils.Reports;
+
+import java.io.IOException;
 
 public class HomePage {
 
@@ -21,12 +24,12 @@ public class HomePage {
     WebElement verifyLogoOnHomePage;
 
 
-    public void verifyHomePage() throws InterruptedException {
+    public void verifyHomePage() throws InterruptedException, IOException {
         Log.info("Verifying logo on home page");
         Thread.sleep(6000);
         Assert.assertTrue(verifyLogoOnHomePage.isDisplayed());
         Log.info("Verified logo on home page Successfully");
-        //  CommonMethods.takeScreenshot("HomePage");
+        Reports.takeScreenshot("Home Page verified");
 
     }
 }
